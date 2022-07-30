@@ -18,7 +18,7 @@ def view(country_dict):
     display_country_codes(country_dict)
     country_to_view = input('Enter country code: ').upper()
     if country_to_view in country_dict:
-        print(f'Country name: {country_dict[country_to_view]}')
+        print(f'Country name: {country_dict[country_to_view]}.')
     else:
         print('There is no country with that code.')
 #Add country if it does not exist in dictionary
@@ -39,11 +39,6 @@ def delete_country(country_dict):
         print(country_name,'was deleted.')
     else:
         print('No country with that code to delete.')
-#Exit application
-def exit_application():
-    print('Bye!')
-    exit()
-#Fuction to create dictionary
 def create_dict():
     country_dict = {
         'CA':'Canada',
@@ -64,7 +59,8 @@ def main():
         elif command.lower() == 'del':
             delete_country(country_dict)
         elif command.lower() == 'exit':
-            exit_application()
+            print('Bye!')
+            break
         else:
             print('Not a valid command. Please try again.')
 #Calling main if namespace is main
